@@ -8,6 +8,7 @@ jobs:
       uses: actions/checkout@master
     - name: lint
       uses: luke142367/Docker-Lint-Action@v1.0.0
+      args: --ignore DL3007
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         TARGET: Dockerfile
