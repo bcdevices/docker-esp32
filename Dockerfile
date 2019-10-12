@@ -41,7 +41,10 @@ RUN dpkg --add-architecture i386 \
 	make \
 	p7zip-full \
 	python \
+	python-cryptography \
+	python-future \
 	python-pip \
+	python-pyparsing \
 	python-serial \
 	python-setuptools \
 	python-wheel \
