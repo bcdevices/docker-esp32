@@ -48,7 +48,7 @@ RUN dpkg --add-architecture i386 \
 	python-setuptools \
 	python-wheel \
 	wget \
-    && rm -rf /var/lib/apt-lists/*
+    && apt-get clean && rm -rf /var/lib/apt-lists/*
 
 WORKDIR /usr/src/fw
 RUN git clone -b v3.3 --recursive \
