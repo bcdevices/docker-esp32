@@ -51,17 +51,8 @@ RUN dpkg --add-architecture i386 \
     && rm -rf /var/lib/apt-lists/*
 
 WORKDIR /usr/src/fw
-
 RUN git clone -b v3.3 --recursive \
   "https://github.com/espressif/esp-idf.git"
 RUN python -m pip install --user -r "/usr/src/fw/esp-idf/requirements.txt"
-
-# Copy everything (use .dockerignore to exclude)
-COPY . /usr/src/fw/
-
 ENV PATH="/opt/xtensa-esp32-elf/bin:${PATH}"
 ENV IDF_PATH="/usr/src/fw/esp-idf"
-
-ADD entrypoint.sh /entrypoint.sh
-
-ENTRYPOINT ["/entrypoint.sh"]
