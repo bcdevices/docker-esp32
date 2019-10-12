@@ -1,10 +1,7 @@
 #
-# Confidential!!!
-# Source code property of Blue Clover Design LLC.
+# Copyright (c) 2019 Blue Clover Devices
 #
-# Demonstration, distribution, replication, or other use of the
-# source codes is NOT permitted without prior written consent
-# from Blue Clover Design.
+# SPDX-License-Identifier: Apache-2.0
 #
 
 FROM buildpack-deps:stretch-scm
@@ -15,7 +12,7 @@ LABEL "com.github.actions.icon"="package"
 LABEL "com.github.actions.color"="blue"
 
 LABEL "repository"="https://github.com/bcdevices/docker-esp32"
-LABEL "homepage"="https://github.com/bcdevices/docker-es32"
+LABEL "homepage"="https://github.com/bcdevices/docker-esp32"
 LABEL "maintainer"="Blue Clover Devices"
   
 RUN curl -S \
