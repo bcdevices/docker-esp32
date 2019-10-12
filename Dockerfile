@@ -24,6 +24,7 @@ RUN curl -S \
   && tar zxf /opt/gcc-xtensa.tar.gz -C /opt \
   && rm -f /opt/gcc-xtensa.tar.gz
 
+# hadolint ignore=DL3008
 RUN dpkg --add-architecture i386 \
     && apt-get update \
     && apt-get install -y --no-install-recommends \
